@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "pocket-piano",
+    "slug": "pocket-piano",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "pocket-piano"
+}
