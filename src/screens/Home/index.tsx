@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useFonts } from 'expo-font';
 
 // components
 import NoteKey from '../../components/NoteKey';
@@ -11,11 +12,27 @@ import { notes } from '../../utils';
 import { Container, KeysContent } from './styles';
 
 const Home = () => {
-  const [naturlKeySize, setNaturalKeySize] = useState(0);
+  const [naturalKeySize, setNaturalKeySize] = useState(0);
+  const [lcdText, setLcdText] = useState('POCKET PIANO');
+  const [loaded] = useFonts({
+    Dotdot: require('../../assets/fonts/Dotdot.ttf'),
+  });
+
+  let timeOutId: any;
+
+  const resetLcdText = () => {
+    timeOutId = setTimeout(() => setLcdText('POCKET PIANO'), 400);
+  };
+
+  const cancelReset = () => clearInterval(timeOutId);
+
+  if (!loaded) {
+    return null;
+  }
 
   return (
     <Container>
-      <TopBar />
+      <TopBar lcdText={lcdText} />
       <KeysContent>
         {notes.map(({ note, isNatural }, index) => (
           <NoteKey
@@ -24,7 +41,10 @@ const Home = () => {
             note={note}
             isNatural={isNatural}
             getNaturalKeySize={setNaturalKeySize}
-            naturalKeySize={naturlKeySize}
+            naturalKeySize={naturalKeySize}
+            setLcdText={setLcdText}
+            resetLcdText={resetLcdText}
+            cancelReset={cancelReset}
           />
         ))}
       </KeysContent>

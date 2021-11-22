@@ -1,17 +1,17 @@
 export const getNote = (note: string) => {
   const paths = {
-    c4: require('../../../assets/audio/c4.mp3'),
-    'c#4': require('../../../assets/audio/c4.mp3'),
-    d4: require('../../../assets/audio/d4.mp3'),
-    'd#4': require('../../../assets/audio/d4.mp3'),
-    e4: require('../../../assets/audio/e4.mp3'),
-    f4: require('../../../assets/audio/f4.mp3'),
-    'f#4': require('../../../assets/audio/f4.mp3'),
-    g4: require('../../../assets/audio/g4.mp3'),
-    'g#4': require('../../../assets/audio/g4.mp3'),
-    a4: require('../../../assets/audio/a5.mp3'),
-    'a#4': require('../../../assets/audio/a5.mp3'),
-    b4: require('../../../assets/audio/b5.mp3'),
+    C4: require('../../../assets/audio/C4.mp3'),
+    'C#4': require('../../../assets/audio/Db4.mp3'),
+    D4: require('../../../assets/audio/D4.mp3'),
+    'D#4': require('../../../assets/audio/Eb4.mp3'),
+    E4: require('../../../assets/audio/E4.mp3'),
+    F4: require('../../../assets/audio/F4.mp3'),
+    'F#4': require('../../../assets/audio/Gb4.mp3'),
+    G4: require('../../../assets/audio/G4.mp3'),
+    'G#4': require('../../../assets/audio/Ab4.mp3'),
+    A4: require('../../../assets/audio/A4.mp3'),
+    'A#4': require('../../../assets/audio/Bb4.mp3'),
+    B4: require('../../../assets/audio/B4.mp3'),
   };
 
   return paths[note];

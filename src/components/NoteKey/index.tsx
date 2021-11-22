@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Audio } from 'expo-av';
 
 // styles
-import { NaturalKey, AccidentalKey } from './styles';
+import * as S from './styles';
 
 // types
 import { KeyProps } from './types';
 import { Sound } from 'expo-av/build/Audio';
+
+// utils
 import { getMargin, getNote } from './utils';
 
 const NoteKey = ({
@@ -15,6 +17,9 @@ const NoteKey = ({
   note,
   naturalKeySize,
   getNaturalKeySize,
+  setLcdText,
+  resetLcdText,
+  cancelReset,
 }: KeyProps) => {
   const [sounds, setSounds] = useState<Sound>();
   const [isPressed, setIsPressed] = useState(false);
@@ -37,11 +42,14 @@ const NoteKey = ({
   }, [isNatural, naturalKeySize, index]);
 
   const playNote = async () => {
+    cancelReset();
+    setLcdText(`NOTE ${note.replace('4', '')}`);
     setIsPressed(true);
     await sounds?.playAsync();
   };
 
   const stopNote = async () => {
+    resetLcdText();
     setIsPressed(false);
     await sounds?.stopAsync();
   };
@@ -53,22 +61,28 @@ const NoteKey = ({
   };
 
   return isNatural ? (
-    <NaturalKey
+    <S.NaturalKey
       isPressed={isPressed}
       onTouchStart={playNote}
       onTouchEnd={stopNote}
       onLayout={onLayout}
       keyMargin={keyMargin}
       naturalKeySize={naturalKeySize}
-    />
+    >
+      <S.NaturalNoteName isPressed={isPressed}>
+        {note.replace('4', '')}
+      </S.NaturalNoteName>
+    </S.NaturalKey>
   ) : (
-    <AccidentalKey
+    <S.AccidentalKey
       isPressed={isPressed}
       onTouchStart={playNote}
       onTouchEnd={stopNote}
       keyMargin={keyMargin}
       naturalKeySize={naturalKeySize}
-    />
+    >
+      <S.AccidentalNoteName>{note.replace('4', '')}</S.AccidentalNoteName>
+    </S.AccidentalKey>
   );
 };
 

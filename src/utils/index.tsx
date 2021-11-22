@@ -5,51 +5,51 @@ interface Note {
 
 export const notes: Array<Note> = [
   {
-    note: 'c4',
+    note: 'C4',
     isNatural: true,
   },
   {
-    note: 'c#4',
+    note: 'C#4',
     isNatural: false,
   },
   {
-    note: 'd4',
+    note: 'D4',
     isNatural: true,
   },
   {
-    note: 'd#4',
+    note: 'D#4',
     isNatural: false,
   },
   {
-    note: 'e4',
+    note: 'E4',
     isNatural: true,
   },
   {
-    note: 'f4',
+    note: 'F4',
     isNatural: true,
   },
   {
-    note: 'f#4',
+    note: 'F#4',
     isNatural: false,
   },
   {
-    note: 'g4',
+    note: 'G4',
     isNatural: true,
   },
   {
-    note: 'g#4',
+    note: 'G#4',
     isNatural: false,
   },
   {
-    note: 'a4',
+    note: 'A4',
     isNatural: true,
   },
   {
-    note: 'a#4',
+    note: 'A#4',
     isNatural: false,
   },
   {
-    note: 'b4',
+    note: 'B4',
     isNatural: true,
   },
 ];

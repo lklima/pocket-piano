@@ -1,10 +1,14 @@
-import { ViewProps } from 'react-native';
+import { TextProps, ViewProps } from 'react-native';
 import styled from 'styled-components/native';
 
 interface View extends ViewProps {
   isPressed?: boolean;
   keyMargin: number;
   naturalKeySize: number;
+}
+
+interface Text extends TextProps {
+  isPressed?: boolean;
 }
 
 export const NaturalKey = styled.View<View>`
@@ -25,4 +29,24 @@ export const AccidentalKey = styled.View<View>`
   right: 0;
   top: ${(p) => p.keyMargin}px;
   z-index: 999;
+`;
+
+export const NaturalNoteName = styled.Text<Text>`
+  color: gray;
+  font-size: 25px;
+  font-weight: bold;
+  transform: rotate(90deg);
+  position: absolute;
+  left: ${(p) => (p.isPressed ? 8 : 4)}px;
+  top: 10px;
+`;
+
+export const AccidentalNoteName = styled.Text`
+  color: #b8b7b7;
+  font-size: 22px;
+  font-weight: bold;
+  transform: rotate(90deg);
+  position: absolute;
+  left: 2px;
+  top: 10px;
 `;

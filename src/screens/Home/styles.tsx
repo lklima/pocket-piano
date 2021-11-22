@@ -7,6 +7,6 @@ export const Container = styled.View`
 
 export const KeysContent = styled.View`
   height: 100%;
-  width: 60%;
+  width: 70%;
   background: black;
 `;
