@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Audio } from 'expo-av';
+import SoundPlayer from 'react-native-sound-player';
 
 // styles
 import * as S from './styles';
 
 // types
 import { KeyProps } from './types';
-import { Sound } from 'expo-av/build/Audio';
 
 // utils
-import { getMargin, getNote } from './utils';
+import { getMargin } from './utils';
 
 const NoteKey = ({
   index,
@@ -21,17 +21,8 @@ const NoteKey = ({
   resetLcdText,
   cancelReset,
 }: KeyProps) => {
-  const [sounds, setSounds] = useState<Sound>();
   const [isPressed, setIsPressed] = useState(false);
   const [keyMargin, setKeyMargin] = useState(0);
-
-  useEffect(() => {
-    (async () => {
-      const { sound } = await Audio.Sound.createAsync(getNote(note));
-
-      setSounds(sound);
-    })();
-  }, []);
 
   useEffect(() => {
     if (!isNatural) {
@@ -45,13 +36,14 @@ const NoteKey = ({
     cancelReset();
     setLcdText(`NOTE ${note.replace('4', '')}`);
     setIsPressed(true);
-    await sounds?.playAsync();
+    SoundPlayer.onFinishedLoading(() => {});
+    SoundPlayer.playSoundFile(note, 'mp3');
   };
 
   const stopNote = async () => {
     resetLcdText();
     setIsPressed(false);
-    await sounds?.stopAsync();
+    SoundPlayer.stop();
   };
 
   const onLayout = ({ nativeEvent }: { nativeEvent: any }) => {

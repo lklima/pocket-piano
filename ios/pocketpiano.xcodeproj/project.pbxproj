@@ -12,6 +12,18 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		96905EF65AED1B983A6B3ABC /* libPods-pocketpiano.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-pocketpiano.a */; };
+		A037F7CD274DC02C00FB952E /* Eb4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A037F7C1274DC02B00FB952E /* Eb4.mp3 */; };
+		A037F7CE274DC02C00FB952E /* C4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A037F7C2274DC02B00FB952E /* C4.mp3 */; };
+		A037F7CF274DC02C00FB952E /* Db4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A037F7C3274DC02C00FB952E /* Db4.mp3 */; };
+		A037F7D0274DC02C00FB952E /* F4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A037F7C4274DC02C00FB952E /* F4.mp3 */; };
+		A037F7D1274DC02C00FB952E /* Bb4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A037F7C5274DC02C00FB952E /* Bb4.mp3 */; };
+		A037F7D2274DC02C00FB952E /* Ab4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A037F7C6274DC02C00FB952E /* Ab4.mp3 */; };
+		A037F7D3274DC02C00FB952E /* D4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A037F7C7274DC02C00FB952E /* D4.mp3 */; };
+		A037F7D4274DC02C00FB952E /* A4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A037F7C8274DC02C00FB952E /* A4.mp3 */; };
+		A037F7D5274DC02C00FB952E /* E4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A037F7C9274DC02C00FB952E /* E4.mp3 */; };
+		A037F7D6274DC02C00FB952E /* G4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A037F7CA274DC02C00FB952E /* G4.mp3 */; };
+		A037F7D7274DC02C00FB952E /* B4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A037F7CB274DC02C00FB952E /* B4.mp3 */; };
+		A037F7D8274DC02C00FB952E /* Gb4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A037F7CC274DC02C00FB952E /* Gb4.mp3 */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 /* End PBXBuildFile section */
@@ -27,6 +39,18 @@
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-pocketpiano.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pocketpiano.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2E3173556A471DD304B334 /* Pods-pocketpiano.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocketpiano.debug.xcconfig"; path = "Target Support Files/Pods-pocketpiano/Pods-pocketpiano.debug.xcconfig"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-pocketpiano.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pocketpiano.release.xcconfig"; path = "Target Support Files/Pods-pocketpiano/Pods-pocketpiano.release.xcconfig"; sourceTree = "<group>"; };
+		A037F7C1274DC02B00FB952E /* Eb4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Eb4.mp3; path = ../src/assets/audio/Eb4.mp3; sourceTree = "<group>"; };
+		A037F7C2274DC02B00FB952E /* C4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = C4.mp3; path = ../src/assets/audio/C4.mp3; sourceTree = "<group>"; };
+		A037F7C3274DC02C00FB952E /* Db4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Db4.mp3; path = ../src/assets/audio/Db4.mp3; sourceTree = "<group>"; };
+		A037F7C4274DC02C00FB952E /* F4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = F4.mp3; path = ../src/assets/audio/F4.mp3; sourceTree = "<group>"; };
+		A037F7C5274DC02C00FB952E /* Bb4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Bb4.mp3; path = ../src/assets/audio/Bb4.mp3; sourceTree = "<group>"; };
+		A037F7C6274DC02C00FB952E /* Ab4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Ab4.mp3; path = ../src/assets/audio/Ab4.mp3; sourceTree = "<group>"; };
+		A037F7C7274DC02C00FB952E /* D4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = D4.mp3; path = ../src/assets/audio/D4.mp3; sourceTree = "<group>"; };
+		A037F7C8274DC02C00FB952E /* A4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = A4.mp3; path = ../src/assets/audio/A4.mp3; sourceTree = "<group>"; };
+		A037F7C9274DC02C00FB952E /* E4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = E4.mp3; path = ../src/assets/audio/E4.mp3; sourceTree = "<group>"; };
+		A037F7CA274DC02C00FB952E /* G4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = G4.mp3; path = ../src/assets/audio/G4.mp3; sourceTree = "<group>"; };
+		A037F7CB274DC02C00FB952E /* B4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = B4.mp3; path = ../src/assets/audio/B4.mp3; sourceTree = "<group>"; };
+		A037F7CC274DC02C00FB952E /* Gb4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Gb4.mp3; path = ../src/assets/audio/Gb4.mp3; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = pocketpiano/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -79,6 +103,18 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				A037F7C8274DC02C00FB952E /* A4.mp3 */,
+				A037F7C6274DC02C00FB952E /* Ab4.mp3 */,
+				A037F7CB274DC02C00FB952E /* B4.mp3 */,
+				A037F7C5274DC02C00FB952E /* Bb4.mp3 */,
+				A037F7C2274DC02B00FB952E /* C4.mp3 */,
+				A037F7C7274DC02C00FB952E /* D4.mp3 */,
+				A037F7C3274DC02C00FB952E /* Db4.mp3 */,
+				A037F7C9274DC02C00FB952E /* E4.mp3 */,
+				A037F7C1274DC02B00FB952E /* Eb4.mp3 */,
+				A037F7C4274DC02C00FB952E /* F4.mp3 */,
+				A037F7CA274DC02C00FB952E /* G4.mp3 */,
+				A037F7CC274DC02C00FB952E /* Gb4.mp3 */,
 				13B07FAE1A68108700A75B9A /* pocketpiano */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -194,7 +230,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A037F7D6274DC02C00FB952E /* G4.mp3 in Resources */,
+				A037F7D3274DC02C00FB952E /* D4.mp3 in Resources */,
+				A037F7D4274DC02C00FB952E /* A4.mp3 in Resources */,
+				A037F7D2274DC02C00FB952E /* Ab4.mp3 in Resources */,
+				A037F7D7274DC02C00FB952E /* B4.mp3 in Resources */,
+				A037F7D0274DC02C00FB952E /* F4.mp3 in Resources */,
+				A037F7CE274DC02C00FB952E /* C4.mp3 in Resources */,
+				A037F7CD274DC02C00FB952E /* Eb4.mp3 in Resources */,
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
+				A037F7D8274DC02C00FB952E /* Gb4.mp3 in Resources */,
+				A037F7CF274DC02C00FB952E /* Db4.mp3 in Resources */,
+				A037F7D1274DC02C00FB952E /* Bb4.mp3 in Resources */,
+				A037F7D5274DC02C00FB952E /* E4.mp3 in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
 			);
@@ -380,7 +428,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -437,7 +485,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

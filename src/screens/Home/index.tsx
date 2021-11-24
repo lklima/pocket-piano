@@ -14,7 +14,7 @@ import { Container, KeysContent } from './styles';
 const Home = () => {
   const [naturalKeySize, setNaturalKeySize] = useState(0);
   const [lcdText, setLcdText] = useState('POCKET PIANO');
-  const [loaded] = useFonts({
+  const [fontLoaded] = useFonts({
     Dotdot: require('../../assets/fonts/Dotdot.ttf'),
   });
 
@@ -26,7 +26,7 @@ const Home = () => {
 
   const cancelReset = () => clearInterval(timeOutId);
 
-  if (!loaded) {
+  if (!fontLoaded) {
     return null;
   }
 

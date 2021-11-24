@@ -1,22 +1,3 @@
-export const getNote = (note: string) => {
-  const paths = {
-    C4: require('../../../assets/audio/C4.mp3'),
-    'C#4': require('../../../assets/audio/Db4.mp3'),
-    D4: require('../../../assets/audio/D4.mp3'),
-    'D#4': require('../../../assets/audio/Eb4.mp3'),
-    E4: require('../../../assets/audio/E4.mp3'),
-    F4: require('../../../assets/audio/F4.mp3'),
-    'F#4': require('../../../assets/audio/Gb4.mp3'),
-    G4: require('../../../assets/audio/G4.mp3'),
-    'G#4': require('../../../assets/audio/Ab4.mp3'),
-    A4: require('../../../assets/audio/A4.mp3'),
-    'A#4': require('../../../assets/audio/Bb4.mp3'),
-    B4: require('../../../assets/audio/B4.mp3'),
-  };
-
-  return paths[note];
-};
-
 export const getMargin = (naturalKeySize: number, index: number) => {
   const halfNoteSize = naturalKeySize / 3.2;
   let naturalKeyMargin = 4;
