@@ -3,6 +3,8 @@ PODS:
   - DoubleConversion (1.1.6)
   - EXApplication (4.0.0):
     - ExpoModulesCore
+  - EXAV (10.1.3):
+    - ExpoModulesCore
   - EXConstants (12.1.3):
     - ExpoModulesCore
   - EXErrorRecovery (3.0.3):
@@ -333,13 +335,17 @@ PODS:
   - RNScreens (3.8.0):
     - React-Core
     - React-RCTImage
-  - RNSoundPlayer (0.11.1):
-    - React
+  - RNSound (0.11.1):
+    - React-Core
+    - RNSound/Core (= 0.11.1)
+  - RNSound/Core (0.11.1):
+    - React-Core
   - Yoga (1.14.0)
 
 DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - EXApplication (from `../node_modules/expo-application/ios`)
+  - EXAV (from `../node_modules/expo-av/ios`)
   - EXConstants (from `../node_modules/expo-constants/ios`)
   - EXErrorRecovery (from `../node_modules/expo-error-recovery/ios`)
   - EXFileSystem (from `../node_modules/expo-file-system/ios`)
@@ -385,7 +391,7 @@ DEPENDENCIES:
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
-  - RNSoundPlayer (from `../node_modules/react-native-sound-player`)
+  - RNSound (from `../node_modules/react-native-sound`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -397,6 +403,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   EXApplication:
     :path: "../node_modules/expo-application/ios"
+  EXAV:
+    :path: "../node_modules/expo-av/ios"
   EXConstants:
     :path: "../node_modules/expo-constants/ios"
   EXErrorRecovery:
@@ -483,8 +491,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
-  RNSoundPlayer:
-    :path: "../node_modules/react-native-sound-player"
+  RNSound:
+    :path: "../node_modules/react-native-sound"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -492,6 +500,7 @@ SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   EXApplication: 0e15240e4d125b62f1cae48759ffbbd32b9286a6
+  EXAV: 8adf9a1c0161144d77e96149a1e5a5f9358be290
   EXConstants: 6d585d93723b18d7a8c283591a335609e3bc153e
   EXErrorRecovery: ac2622400a32be84604591f70d0efff416e4b9a2
   EXFileSystem: 99aac7962c11c680681819dd9cbca24e20e5b1e7
@@ -535,7 +544,7 @@ SPEC CHECKSUMS:
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNReanimated: 024eff8202342abf4b24e11575a16afc441dabfe
   RNScreens: 6e1ea5787989f92b0671049b808aef64fa1ef98c
-  RNSoundPlayer: 1a8fb785d9c41ec0cb14283a5ba87ff30c2a50b6
+  RNSound: 27e8268bdb0a1f191f219a33267f7e0445e8d62f
   Yoga: e6ecf3fa25af9d4c87e94ad7d5d292eedef49749
 
 PODFILE CHECKSUM: 4d6954c0d6e7b630197b813a8241f9764de0c90f

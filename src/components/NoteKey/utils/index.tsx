@@ -1,6 +1,6 @@
 export const getMargin = (naturalKeySize: number, index: number) => {
   const halfNoteSize = naturalKeySize / 3.2;
-  let naturalKeyMargin = 4;
+  let naturalKeyMargin = 2.5;
 
   switch (index) {
     case 1:

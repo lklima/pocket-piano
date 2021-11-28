@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Audio } from 'expo-av';
-import SoundPlayer from 'react-native-sound-player';
+import React, { useEffect, useRef, useState } from 'react';
+import Sound from 'react-native-sound';
 
 // styles
 import * as S from './styles';
@@ -24,6 +23,10 @@ const NoteKey = ({
   const [isPressed, setIsPressed] = useState(false);
   const [keyMargin, setKeyMargin] = useState(0);
 
+  const sound = useRef(new Sound(note + '.mp3', Sound.MAIN_BUNDLE, () => {}));
+
+  const noteName = note.replace('1', '#').replace('4', '').toLocaleUpperCase();
+
   useEffect(() => {
     if (!isNatural) {
       const margin = getMargin(naturalKeySize, index);
@@ -34,16 +37,16 @@ const NoteKey = ({
 
   const playNote = async () => {
     cancelReset();
-    setLcdText(`NOTE ${note.replace('4', '')}`);
+    setLcdText(`NOTE ${noteName}`);
     setIsPressed(true);
-    SoundPlayer.onFinishedLoading(() => {});
-    SoundPlayer.playSoundFile(note, 'mp3');
+
+    sound.current.play(() => console.log('play'));
   };
 
   const stopNote = async () => {
     resetLcdText();
     setIsPressed(false);
-    SoundPlayer.stop();
+    setTimeout(() => sound.current.stop(), 200);
   };
 
   const onLayout = ({ nativeEvent }: { nativeEvent: any }) => {
@@ -60,10 +63,9 @@ const NoteKey = ({
       onLayout={onLayout}
       keyMargin={keyMargin}
       naturalKeySize={naturalKeySize}
+      testID={`${note}-note-key`}
     >
-      <S.NaturalNoteName isPressed={isPressed}>
-        {note.replace('4', '')}
-      </S.NaturalNoteName>
+      <S.NaturalNoteName isPressed={isPressed}>{noteName}</S.NaturalNoteName>
     </S.NaturalKey>
   ) : (
     <S.AccidentalKey
@@ -72,8 +74,9 @@ const NoteKey = ({
       onTouchEnd={stopNote}
       keyMargin={keyMargin}
       naturalKeySize={naturalKeySize}
+      testID={`${note}-note-key`}
     >
-      <S.AccidentalNoteName>{note.replace('4', '')}</S.AccidentalNoteName>
+      <S.AccidentalNoteName>{noteName}</S.AccidentalNoteName>
     </S.AccidentalKey>
   );
 };

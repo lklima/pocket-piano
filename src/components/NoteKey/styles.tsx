@@ -17,7 +17,7 @@ export const NaturalKey = styled.View<View>`
   border-left-color: ${(p) => (p.isPressed ? 'black' : 'white')};
   border-radius: 8px;
   flex: 1;
-  margin: 4px 4px;
+  margin: 2.5px 2.5px;
 `;
 
 export const AccidentalKey = styled.View<View>`
@@ -43,10 +43,10 @@ export const NaturalNoteName = styled.Text<Text>`
 
 export const AccidentalNoteName = styled.Text`
   color: #b8b7b7;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   transform: rotate(90deg);
   position: absolute;
-  left: 2px;
+  left: 4px;
   top: 10px;
 `;
