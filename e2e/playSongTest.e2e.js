@@ -17,8 +17,6 @@ describe('Play Songs', () => {
     const eNoteKey = await element(by.id(`${E}-note-key`));
     const fNoteKey = await element(by.id(`${F}-note-key`));
     const gNoteKey = await element(by.id(`${G}-note-key`));
-    const aNoteKey = await element(by.id(`${A}-note-key`));
-    const bNoteKey = await element(by.id(`${B}-note-key`));
 
     await eNoteKey.tap();
     await eNoteKey.tap();
@@ -28,9 +26,7 @@ describe('Play Songs', () => {
     await eNoteKey.tap();
     await eNoteKey.tap();
     await eNoteKey.longPress();
-    expect(element(by.text(`NOTE ${E}`))).toBeVisible();
-
-    await eNoteKey.longPress();
+    await eNoteKey.tap();
     expect(element(by.text(`NOTE ${E}`))).toBeVisible();
 
     await gNoteKey.longPress();
@@ -49,7 +45,7 @@ describe('Play Songs', () => {
     await fNoteKey.tap();
     await fNoteKey.longPress();
     await fNoteKey.tap();
-    await fNoteKey.longPress();
+    await fNoteKey.tap();
     expect(element(by.text(`NOTE ${F}`))).toBeVisible();
 
     await eNoteKey.tap();
