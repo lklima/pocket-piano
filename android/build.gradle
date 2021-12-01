@@ -31,12 +31,13 @@ allprojects {
             // Android JSC is installed from npm
             url(new File(["node", "--print", "require.resolve('jsc-android/package.json')"].execute().text.trim(), "../dist"))
         }
-        maven {
+       
+        google()
+         maven {
             // Artefados do Detox para o node_module
             url "$rootDir/../node_modules/detox/Detox-android"
         }
 
-        google()
         mavenCentral()
         jcenter()
         maven { url 'https://www.jitpack.io' }

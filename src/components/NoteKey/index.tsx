@@ -35,15 +35,15 @@ const NoteKey = ({
     }
   }, [isNatural, naturalKeySize, index]);
 
-  const playNote = async () => {
+  const playNote = () => {
     cancelReset();
     setLcdText(`NOTE ${noteName}`);
     setIsPressed(true);
 
-    sound.current.play(() => console.log('play'));
+    sound.current.play(() => {});
   };
 
-  const stopNote = async () => {
+  const stopNote = () => {
     resetLcdText();
     setIsPressed(false);
     setTimeout(() => sound.current.stop(), 200);
@@ -63,7 +63,7 @@ const NoteKey = ({
       onLayout={onLayout}
       keyMargin={keyMargin}
       naturalKeySize={naturalKeySize}
-      testID={`${note}-note-key`}
+      testID={`${noteName}-note-key`}
     >
       <S.NaturalNoteName isPressed={isPressed}>{noteName}</S.NaturalNoteName>
     </S.NaturalKey>
@@ -74,7 +74,7 @@ const NoteKey = ({
       onTouchEnd={stopNote}
       keyMargin={keyMargin}
       naturalKeySize={naturalKeySize}
-      testID={`${note}-note-key`}
+      testID={`${noteName}-note-key`}
     >
       <S.AccidentalNoteName>{noteName}</S.AccidentalNoteName>
     </S.AccidentalKey>

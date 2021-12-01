@@ -21,7 +21,7 @@ const Home = () => {
   let timeOutId: any;
 
   const resetLcdText = () => {
-    timeOutId = setTimeout(() => setLcdText('POCKET PIANO'), 800);
+    timeOutId = setTimeout(() => setLcdText('POCKET PIANO'), 1550);
   };
 
   const cancelReset = () => clearInterval(timeOutId);
