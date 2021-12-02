@@ -40,7 +40,7 @@ const NoteKey = ({
     setLcdText(`NOTE ${noteName}`);
     setIsPressed(true);
 
-    sound.current.play(() => {});
+    sound.current.play((suc) => console.log(suc));
   };
 
   const stopNote = () => {

@@ -1,5 +1,5 @@
 describe('Play Songs', () => {
-  const [C, D, E, F, G, A, B] = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+  const [C, D, E, F, G] = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
 
   beforeAll(async () => {
     await device.launchApp();
@@ -11,16 +11,18 @@ describe('Play Songs', () => {
     await expect(text).toBeVisible();
   });
 
-  it.only('Play Jingle Bells song', async () => {
+  it('Play Jingle Bells song', async () => {
     const cNoteKey = await element(by.id(`${C}-note-key`));
     const dNoteKey = await element(by.id(`${D}-note-key`));
     const eNoteKey = await element(by.id(`${E}-note-key`));
     const fNoteKey = await element(by.id(`${F}-note-key`));
     const gNoteKey = await element(by.id(`${G}-note-key`));
 
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     await eNoteKey.tap();
     await eNoteKey.tap();
-    await eNoteKey.longPress();
+    await eNoteKey.tap();
     expect(element(by.text(`NOTE ${E}`))).toBeVisible();
 
     await eNoteKey.tap();
@@ -29,13 +31,13 @@ describe('Play Songs', () => {
     await eNoteKey.tap();
     expect(element(by.text(`NOTE ${E}`))).toBeVisible();
 
-    await gNoteKey.longPress();
+    await gNoteKey.tap();
     expect(element(by.text(`NOTE ${G}`))).toBeVisible();
 
-    await cNoteKey.longPress();
+    await cNoteKey.tap();
     expect(element(by.text(`NOTE ${C}`))).toBeVisible();
 
-    await dNoteKey.longPress();
+    await dNoteKey.tap();
     expect(element(by.text(`NOTE ${D}`))).toBeVisible();
 
     await eNoteKey.longPress();
@@ -49,21 +51,20 @@ describe('Play Songs', () => {
     expect(element(by.text(`NOTE ${F}`))).toBeVisible();
 
     await eNoteKey.tap();
-    await eNoteKey.tap();
     await eNoteKey.longPress();
+    await eNoteKey.tap();
     expect(element(by.text(`NOTE ${E}`))).toBeVisible();
 
-    await gNoteKey.longPress();
+    await gNoteKey.tap();
     expect(element(by.text(`NOTE ${G}`))).toBeVisible();
 
     await gNoteKey.tap();
-    await gNoteKey.longPress();
     expect(element(by.text(`NOTE ${G}`))).toBeVisible();
 
-    await fNoteKey.longPress();
+    await fNoteKey.tap();
     expect(element(by.text(`NOTE ${F}`))).toBeVisible();
 
-    await dNoteKey.longPress();
+    await dNoteKey.tap();
     expect(element(by.text(`NOTE ${D}`))).toBeVisible();
 
     await cNoteKey.longPress();
@@ -77,60 +78,61 @@ describe('Play Songs', () => {
     const fNoteKey = await element(by.id(`${F}-note-key`));
     const gNoteKey = await element(by.id(`${G}-note-key`));
 
-    await cNoteKey.longPress();
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    await cNoteKey.tap();
     expect(element(by.text(`NOTE ${C}`))).toBeVisible();
 
-    await dNoteKey.longPress();
+    await dNoteKey.tap();
     expect(element(by.text(`NOTE ${D}`))).toBeVisible();
 
-    await eNoteKey.longPress();
+    await eNoteKey.tap();
     expect(element(by.text(`NOTE ${E}`))).toBeVisible();
 
     await fNoteKey.longPress();
     expect(element(by.text(`NOTE ${F}`))).toBeVisible();
 
-    await fNoteKey.longPress();
+    await fNoteKey.tap();
     await fNoteKey.longPress();
     expect(element(by.text(`NOTE ${F}`))).toBeVisible();
 
-    await cNoteKey.longPress();
+    await cNoteKey.tap();
     expect(element(by.text(`NOTE ${C}`))).toBeVisible();
 
-    await dNoteKey.longPress();
+    await dNoteKey.tap();
     await cNoteKey.longPress();
+    await dNoteKey.tap();
+    await dNoteKey.tap();
     await dNoteKey.longPress();
-    await dNoteKey.longPress();
-    await dNoteKey.longPress();
-
     expect(element(by.text(`NOTE ${D}`))).toBeVisible();
 
-    await eNoteKey.longPress();
+    await eNoteKey.tap();
     expect(element(by.text(`NOTE ${E}`))).toBeVisible();
 
-    await gNoteKey.longPress();
+    await gNoteKey.tap();
     expect(element(by.text(`NOTE ${G}`))).toBeVisible();
 
-    await fNoteKey.longPress();
+    await fNoteKey.tap();
     expect(element(by.text(`NOTE ${F}`))).toBeVisible();
 
     await eNoteKey.longPress();
-    await eNoteKey.longPress();
-    await eNoteKey.longPress();
+    await eNoteKey.tap();
+    await eNoteKey.tap();
     expect(element(by.text(`NOTE ${E}`))).toBeVisible();
 
-    await cNoteKey.longPress();
+    await cNoteKey.tap();
     expect(element(by.text(`NOTE ${C}`))).toBeVisible();
 
-    await dNoteKey.longPress();
+    await dNoteKey.tap();
     expect(element(by.text(`NOTE ${D}`))).toBeVisible();
 
-    await eNoteKey.longPress();
+    await eNoteKey.tap();
     expect(element(by.text(`NOTE ${E}`))).toBeVisible();
 
     await fNoteKey.longPress();
     expect(element(by.text(`NOTE ${F}`))).toBeVisible();
 
-    await fNoteKey.longPress();
+    await fNoteKey.tap();
     await fNoteKey.longPress();
     expect(element(by.text(`NOTE ${F}`))).toBeVisible();
   });
